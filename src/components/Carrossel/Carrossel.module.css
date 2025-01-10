@@ -1,0 +1,39 @@
+.carrosselContainer{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%; /* Ajuste conforme necessário */
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: auto;
+  margin-top: 25px;
+  align-items: center;
+}
+.carrosselDisplay{
+    width: 1300px;
+    height: 490px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius:30px;
+    border: 2px solid #000000;
+    
+}
+.carrosselImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.btnLeft{
+    height: 65px;
+    width: 65px;
+    border-radius: 17px;
+    border: 1px solid black;
+}
+.btnRight{
+    height: 65px;
+    width: 65px;
+    border-radius: 17px;
+    border: 1px solid black;
+}
