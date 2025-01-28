@@ -1,26 +1,35 @@
-/* Header.module.css */
-
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between; /* Mantém a estrutura alinhada */
     height: 68px;
     background-color: #f9f9f9;
-    border-radius: 6px;
     padding: 0 20px;
     font-family: Arial, sans-serif;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra apenas abaixo do header */
-    border-bottom: 1px solid #888888; /* Linha divisória abaixo */
-  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-bottom: 1px solid #888888;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    box-sizing: border-box; 
 }
 
-/* Lado esquerdo: logo e opções */
-.content_left {
+.content_left, .content_right {
     display: flex;
     align-items: center;
-    justify-content: left;
-    gap: 8px;
+    gap: 20gipx;
 }
+
+.content_center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-51.5%);
+    width: 40%;
+    max-width: 50%;
+}
+
+
 
 .opcoes {
     height: 23px;
@@ -32,23 +41,19 @@
     height: 40px;
 }
 
-/* Centro: campo de busca */
-.content_center {
-    display: flex;
-    align-items: center;
-    margin: 0 20px;
-}
+
+
 
 .searchContainer {
     position: relative;
-    width: 440px;
+    width: 100%;
     
 }
 
 .searchInput {
     width: 100%;
-    padding: 10px 5px;
-    border: 1.5px solid black;
+    padding: 10px;
+    border: 1.5px solid rgb(168, 168, 168);
     border-radius: 8px;
     outline: none;
     font-size: 15px;
@@ -59,7 +64,7 @@
 .searchButton {
     position: absolute;
     top: 50%;
-    right: -8px; /* Posiciona o botão dentro do campo */
+    right: 8px; 
     transform: translateY(-50%);
     background: none;
     border: none;
@@ -71,14 +76,6 @@
     height: 20px; 
 }
 
-
-
-/* Lado direito: ícones de ação */
-.content_right {
-    display: flex;
-    gap: 35px;
-    
-}
 
 .content_right img {
     width: 24px;
