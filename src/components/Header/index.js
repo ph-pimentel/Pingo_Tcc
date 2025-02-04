@@ -9,7 +9,7 @@ function Header() {
                 <a href="#">
                     <img className={styles.opcoes} src="/img/Header/opções.png" alt="opções" />
                 </a>
-                <a href="#">
+                <a href="#" className={styles.imgLogo}>
                     <img className={styles.imgLogo} src="/img/Header/pingoLogo.png" alt="logo" />
                 </a>
             </div>
@@ -21,9 +21,10 @@ function Header() {
                         type="text"
                         className={styles.searchInput}
                         placeholder="Pesquise aqui..."
+                        maxLength={40}
                     />
                     <button className={styles.searchButton}>
-                        <img className={styles.lupa} src="/img/Header/lupa.png" alt="lupa" />
+                        <img className={styles.icons} src="/img/Header/lupa.png" alt="lupa" />
                     </button>
                 </div>
             </div>
@@ -31,13 +32,13 @@ function Header() {
             {/* Lado direito: ícones de ação */}
             <div className={styles.content_right}>
                 <a href="#">
-                    <img className={styles.coracao} src="/img/Header/coração.png" alt="coração" />
+                    <img className={styles.icons} src="/img/Header/coração.png" alt="coração" />
                 </a>
                 <a href="#">
-                    <img className={styles.perfil} src="/img/Header/perfil.png" alt="perfil" />
+                    <img className={styles.icons} src="/img/Header/perfil.png" alt="perfil" />
                 </a>
                 <a href="#">
-                    <img className={styles.configuracoes} src="/img/Header/configurações.png" alt="configurações" />
+                    <img className={styles.icons} src="/img/Header/configurações.png" alt="configurações" />
                 </a>
             </div>
         </header>

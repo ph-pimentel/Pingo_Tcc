@@ -22,7 +22,6 @@ const Carrossel = () => {
             <button className={styles.btnLeft} onClick={handlePrev}>
                 <img src="/img/Carrossel/SetaEsquerda.png" alt="Anterior"/>
             </button>
-
             <div className={styles.carrosselDisplay}>
             <img
                 src={imageData[currentIndex].src}
