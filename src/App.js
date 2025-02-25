@@ -1,17 +1,15 @@
-import Title from "./components/Title"
-import Container from "./components/Container";
-import Header from "./components/Header";
-import Carrossel from "./components/Carrossel";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
 
 function App() {
     return (
-     <>   
-       <Header/>
-       <Container>
-        <Title></Title>
-        <Carrossel></Carrossel>
-       </Container>
-     </>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+            </Routes>
+        </Router>
     );
 }
 

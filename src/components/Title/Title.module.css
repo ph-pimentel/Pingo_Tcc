@@ -7,6 +7,7 @@
     top: 30px;
     width: 60%;
     z-index: 4;
+    animation: powerAnimation 1s infinite alternate;
 }
 
 .title h1 {
@@ -18,5 +19,14 @@
 .starL, .starR {
     width: 20em;
     height: auto;
+}
+
+@keyframes powerAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
 
