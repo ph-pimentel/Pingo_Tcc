@@ -3,11 +3,12 @@
     justify-content: center;  
     align-items: center; 
     margin: 0 auto;
-    position: fixed;
+    
     top: 30px;
     width: 60%;
     z-index: 4;
     animation: powerAnimation 1s infinite alternate;
+    margin-top: 3000px;
 }
 
 .title h1 {

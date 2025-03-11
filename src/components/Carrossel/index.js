@@ -28,13 +28,20 @@ const Carrossel = () => {
                 alt={imageData[currentIndex].alt}
                  className={styles.carrosselImage}
             />
+            
+            
+            
+            
+            
             </div>
 
             <button className={styles.btnRight} onClick={handleNext}>
                 <img src="/img/Carrossel/SetaDireita.png" alt="Proxima"/>
             </button>
+            
     
         </div>
+        
     );
 }
 

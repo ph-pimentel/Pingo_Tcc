@@ -105,5 +105,5 @@
     transition:  all 0.3s ease;
 }
 .imgLogo:hover{
-    scale: calc(1.02);
+    scale: calc(1.008);
 }

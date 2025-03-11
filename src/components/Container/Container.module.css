@@ -2,16 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    background:no-repeat;
     width: 100%;
     min-height: 100vh; 
-    background-image: url('/public/img/BackGround/Home.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-attachment: fixed;
-    background-size: 100rlh;
-    position: relative; 
-    flex-direction: column;
-    z-index: 1;
+
 }
 
 .content {

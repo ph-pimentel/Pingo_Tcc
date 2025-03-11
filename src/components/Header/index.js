@@ -4,6 +4,7 @@ import styles from "./Header.module.css";
 function Header() {
     return (
         <header className={styles.header}>
+            
             {/* Lado esquerdo: logo e opções */}
             <div className={styles.content_left}>
                 <a href="#">
