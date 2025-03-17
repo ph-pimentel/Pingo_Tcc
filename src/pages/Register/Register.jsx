@@ -1,63 +1,48 @@
 import styles from "./Register.module.css";
 import { useState } from "react";
+import { focusInput, togglePasswordVisibility } from "../../scripts/script.js";
 
-function Register(){
+function Register() {
     const [showPassword, setShowPassword] = useState(false);
-    return(
-        <div className={styles.container}>
 
-            {/*----FORMULARIO DE Registro----*/}
-        
-            <img src="/img/BackGround/pingoicon.png" className={styles.icon}/>
-        
+    return (
+        <div className={styles.registerContainer}>
+            {/*---- Ícone do Registro ----*/}
+            <img src="/img/BackGround/pingoicon.png" className={styles.registerIcon} alt="Ícone do Registro" />
 
+            {/*---- Formulário de Registro ----*/}
+            <form className={styles.registerForm} method="POST">
+                <h1 className={styles.registerTitle}>Registrar</h1>
+                <input type="text" className={styles.usernameInput} placeholder="Nome de Usuário*" />
+                <input type="email" className={styles.emailInput} placeholder="Endereço de e-mail*" />
 
-        <form className={styles.login_form} method="POST">  
+                {/*---- Input de Senha ----*/}
+                <label className={styles.passwordInputContainer} onClick={focusInput}>
+                    <input type={showPassword ? "text" : "password"} placeholder="Senha*" />
+                    <img
+                        src={showPassword ? "/img/Icon/EyeOpen.png" : "/img/Icon/EyeBlock.png"}
+                        alt="Mostrar senha"
+                        onClick={(e) => togglePasswordVisibility(e, setShowPassword)}
+                    />
+                </label>
 
-            <h1 className={styles.title}>Registrar</h1>
+                {/*---- Repetir Senha ----*/}
+                <label className={styles.passwordInputContainer} onClick={focusInput}>
+                    <input type={showPassword ? "text" : "password"} placeholder="Repetir Senha*" />
+                </label>
 
-            <input type="text" className={styles.login_input} placeholder="Nome de Usuário*"/>
-            <input type="email" className={styles.login_input} placeholder="Endereço de e-mail*"/>
+                {/*---- Manter Conectado ----*/}
+                <div className={styles.optionsContainer}>
+                    <div className={styles.rememberMeContainer}>
+                        <input type="checkbox" id="rememberMe" className={styles.rememberMeCheckbox} />
+                        <label htmlFor="rememberMe" className={styles.rememberMeLabel}>Manter Conectado</label>
+                    </div>
+                </div>
 
-            {/*----INPUT-SENHA----*/}
-            <label className={styles.login_input_container} onClick={(e) => {
-
-            {/*--Sistema-de-foco-no-input-ao-clicar-na-label--*/}
-                 const input = e.currentTarget.querySelector("input");
-                if (document.activeElement !== input) {
-                input.focus();
-    }
-  }}
->
-              <input type={showPassword ? "text" : "password"}  placeholder="Senha*"/>
-              <img src={showPassword ? "/img/Icon/EyeOpen.png" : "/img/Icon/EyeBlock.png"} alt="Mostrar senha"
-                onClick={(e) => {
-                 e.stopPropagation(); 
-                 setShowPassword(!showPassword);
-                  }}
-                />
-        </label>
-            <label className={styles.login_input_container} onClick={(e) => {
-             const input = e.currentTarget.querySelector("input");
-                if (document.activeElement !== input) {
-                input.focus();
-    }
-  }}
->
-              <input type={showPassword ? "text" : "password"}  placeholder="Repetir Senha*"/>
-             </label>
-
-            {/*---MANTER-CONECTADO---*/}
-            <div className={styles.login_form_container}/>    
-            <div className={styles.checkbox_container}>
-                <input type="checkbox" id="rememberMe" className={styles.checkbox}/>
-                <label htmlFor="rememberMe" className={styles.checkbox_label}>Manter Conectado</label>
-            </div>    
-
-            {/*---CONTINUAR---*/}
-                <button className={styles.login_btn}>Continuar</button>
-        </form>
-</div>
+                {/*---- Botão Continuar ----*/}
+                <button className={styles.continueButton}>Continuar</button>
+            </form>
+        </div>
     );
 }
 

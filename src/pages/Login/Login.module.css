@@ -23,28 +23,25 @@
     --border-thickness: 0.5px;
     --box-shadow-default: 0px 4px 4px rgba(0, 0, 0, 0.25);
     --box-shadow-strong: 0px 3px 5px rgba(0, 0, 0, 0.45);
-    --box-shadow-super-strong: 0px 5px 8px rgba( 0, 0, 0, 0.50)
+    --box-shadow-super-strong: 0px 5px 8px rgba(0, 0, 0, 0.50);
 }
-
 
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     background-color: white;
-
     user-select: none;
 }
 
-.container {
+/*___Container Principal___*/
+.loginContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     height: 100vh;
     width: 100vw;
-
     background: var(--background-color);
     background: url('../../../public/img/BackGround/BackgroundLogin.png');
     background-position: center;
@@ -53,203 +50,177 @@ html, body {
     background-attachment: fixed;
 }
 
-.icon {
+/*--Ícone--*/
+.loginIcon {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
     max-width: 140px;
     max-height: 140px;
-
     margin-bottom: 10px;
-
 }
 
-.title {
+/*___Título___*/
+.loginTitle {
     font-family: var(--font-primary);
-    font-weight:unset;
+    font-weight: unset;
     font-size: var(--font-size-large);
-
     pointer-events: none;
     -webkit-user-drag: none;
-
 }
 
-.login_form {
+/*___Formulário de Login___*/
+.loginForm {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
     background-color: var(--background-color);
-    
     padding: 30px 90px;
-
     border: none;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-super-strong);
 }
 
-.login_form .login_input {
+/*--Input de Email--*/
+.emailInput {
     align-items: center;
     justify-content: center;
-    
     width: 400px;
-    height: 25px;
+    height: 57px;
     padding: var(--padding-default);
     font-size: var(--font-size-small);
     margin-top: var(--margin-top-default);
-
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-default);
     border: solid var(--border-thickness) var(--border-color);
 }
 
-.login_form input::placeholder {
+.loginForm input::placeholder {
     font-size: var(--font-size-small);
     font-weight: bold;
     color: var(--placeholder-color);
 }
 
-.login_form input:focus {
+.loginForm input:focus {
     border: 1px solid var(--primary-color);
     outline: 2px solid var(--primary-color);
 }
 
-.login_form_container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    width: 100%;
-    margin-top: 15px;
-}
-
-
-
-.login_input_container {
+/*--Input de Senha--*/
+.passwordInputContainer {
     display: flex;
     align-items: center;
     width: 400px;
     padding: var(--padding-default);
     font-size: var(--font-size-small);
     margin-top: var(--margin-top-default);
-
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-default);
     border: solid var(--border-thickness) var(--border-color);
-
     background-color: white;
-    cursor: text; 
+    cursor: text;
 }
 
-.login_input_container:focus-within {
+.passwordInputContainer:focus-within {
     border: 1px solid var(--primary-color);
     outline: 2px solid var(--primary-color);
 }
 
-
-.login_input_container input {
+.passwordInputContainer input {
     flex: 1;
     height: 25px;
     border: none;
     outline: none;
     font-size: inherit;
     background: white;
-    padding-right: 10px; 
+    padding-right: 10px;
 }
 
-.login_input_container input:focus {
+.passwordInputContainer input:focus {
     border: none;
     outline: none;
 }
 
-
-.login_input_container img {
+.passwordInputContainer img {
     max-width: 20px;
     max-height: 20px;
     cursor: pointer;
 }
 
+/*___Manter Conectado e Esqueceu a Senha___*/
+.optionsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
 
-
-.checkbox_container {
-    display: flex; 
+/*--Checkbox--*/
+.rememberMeContainer {
+    display: flex;
     justify-content: left;
     align-items: center;
-    
     width: 100%;
 }
 
-.forgot_password {
-    width: 50%;
-    
-    text-decoration: none;
-    color: var(--forgot-password-color);
-
-}
-
-.checkbox_label {
+.rememberMeLabel {
     display: flex;
     align-items: center;
     justify-content: center;
-    
     width: 150px;
-    
     font-size: var(--font-size-small);
     color: var(--text-color);
-    
     cursor: pointer;
 }
 
-
-/*---MANTER-CONECTADO---*/
-input[type="checkbox"] {
+.rememberMeCheckbox {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    
     width: 20px;
     height: 20px;
-    
     background-color: var(--background-color);
-
     appearance: none;
-
     border: 1.5px solid var(--border-color);
     border-radius: 5px;
-
     cursor: pointer;
 }
 
-input[type="checkbox"]::after {
-    content: "✓"; 
-    font-size: var(--font-size-small); 
+.rememberMeCheckbox::after {
+    content: "✓";
+    font-size: var(--font-size-small);
     font-weight: bold;
-    font-family: sans-serif; 
+    font-family: sans-serif;
     color: transparent;
-
     transition: color 0.2s ease-in-out;
 }
 
-input[type="checkbox"]:checked {
+.rememberMeCheckbox:checked {
     background-color: var(--primary-color);
     border: 1.5px solid var(--primary-color);
-
     width: 20px;
     height: 20px;
 }
 
-input[type="checkbox"]:checked::after {
-    color: var(--background-color); 
+.rememberMeCheckbox:checked::after {
+    color: var(--background-color);
 }
 
-.login_btn {
+/*--Esqueceu a Senha--*/
+.forgotPasswordLink {
+    width: 50%;
+    text-decoration: none;
+    color: var(--forgot-password-color);
+}
+
+/*___Botão Continuar___*/
+.continueButton {
     display: flex;
     align-items: center;
     justify-content: center;
-    
     background-color: var(--secondary-color);
     color: var(--background-color);
     border: solid 1px var(--border-color);
@@ -257,94 +228,77 @@ input[type="checkbox"]:checked::after {
     box-shadow: var(--box-shadow-default);
     border: none;
     cursor: pointer;
-    
     width: 100%;
     height: 60px;
     padding: var(--padding-default);
     font-size: var(--font-size-small);
     margin-top: var(--margin-top-default);
-
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
-.login_btn:hover{
+.continueButton:hover {
     background-color: #0057d9;
 }
 
-
-
-.login_register_container {
+/*___Mover para Registro___*/
+.registerContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
-    
     padding: 20px 20px;
-
-
 }
 
-.move_to_register {
+.registerLink {
     text-decoration: none;
     color: var(--secondary-color);
 }
 
-.login_or_container {
+/*___Formas de Login___*/
+.alternativeLoginContainer {
     display: flex;
     align-items: center;
     text-align: center;
-
     width: 100%;
 }
 
-.login_or_container hr {
+.alternativeLoginContainer hr {
     flex-grow: 1;
     border-top: solid 1px #ccc;
     margin: 0 15px;
 }
 
-.login_or_container span {
+.alternativeLoginContainer span {
     color: var(--placeholder-color);
-
     margin-bottom: 5px;
-
-
 }
 
-
-.alt_login_button{
+/*___Login com Google___*/
+.googleLoginButton {
     display: flex;
     align-items: center;
     justify-content: left;
-    gap:20px;
-
+    gap: 20px;
     width: 100%;
     height: 60px;
     margin-top: 15px;
-
     font-size: 16px;
-    font-weight:unset;
-    
+    font-weight: unset;
     background-color: white;
-
     cursor: pointer;
-
     border: none;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-strong);
-
     transition: all 0.2s ease;
-
-
-    & img{
-        margin-left: 15px;
-        max-width: 25px;
-        max-height: 25px;
-    }
 }
 
-.alt_login_button:hover{
-    transition: 0.2s ease;
+.googleLoginButton:hover {
     background-color: rgb(237, 237, 237);
+}
+
+.googleLoginButton img {
+    margin-left: 15px;
+    max-width: 25px;
+    max-height: 25px;
 }

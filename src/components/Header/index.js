@@ -1,48 +1,102 @@
 // Header.js
 import styles from "./Header.module.css";
+import { focusInput, useProfileMenu } from "../../scripts/script.js";
+
+
 
 function Header() {
+    const { isOpen, toggleMenu, menuRef, buttonRef } = useProfileMenu();
     return (
-        <header className={styles.header}>
-            
-            {/* Lado esquerdo: logo e opções */}
-            <div className={styles.content_left}>
-                <a href="#">
-                    <img className={styles.opcoes} src="/img/Header/opções.png" alt="opções" />
-                </a>
-                <a href="#" className={styles.imgLogo}>
-                    <img className={styles.imgLogo} src="/img/Header/pingoLogo.png" alt="logo" />
-                </a>
-            </div>
 
-            {/* Centro: campo de busca */}
-            <div className={styles.content_center}>
-                <div className={styles.searchContainer}>
-                    <input
-                        type="text"
-                        className={styles.searchInput}
-                        placeholder="Pesquise aqui..."
-                        maxLength={40}
-                    />
-                    <button className={styles.searchButton}>
-                        <img className={styles.icons} src="/img/Header/lupa.png" alt="lupa" />
-                    </button>
+        <div className={styles.header}>
+
+            {/*-- Main Container -- */}
+            <div className={styles.container}>
+
+                <div className={styles.left}>
+                    <a href="/">
+                        <img src="../img/Header/pingoLogo.png" className={styles.logo} />
+                    </a>
+
+                    {/* - Icons -*/}
+                    <div className={styles.left_icons_container}>
+                       {/* Amigos */}
+                        <a href="">
+                        <img src="../img/Header/perfil.png" className={styles.left_icons} />
+                        </a>
+
+                        {/* Favoritos */}
+                        <a href="">
+                            <img src="../img/Header/perfil.png" className={styles.left_icons} />
+                        </a>
+
+                        {/* Quadras */}
+                        <a href="">
+                            <img src="../img/Header/perfil.png" className={styles.left_icons} />
+                        </a>
+                    </div>
+
+                </div>
+
+                {/*-- Center --*/}
+                <div className={styles.center}>
+                    <label className={styles.search_container} onClick={(e) => focusInput}>
+                        <input id="search_input" placeholder="Pesquise aqui..." maxLength="100" className={styles.search_input} />
+                        <img src="../img/Header/lupa.png" className={styles.search_icon} />
+                    </label>
+
+                </div>
+
+
+                {/*-- Right --*/}
+                <div className={styles.right}>
+                    <div className={styles.right_icons_container}>
+
+                        {/* Adicione sua quadra */}
+                        <a href="">
+                        <img src="../img/Header/perfil.png" className={styles.right_icons} />
+                        </a>
+
+                        {/* Informações */}
+                        <a href="">
+                        <img src="../img/Header/perfil.png" className={styles.right_icons} />
+                        </a>
+
+                        {/* Notificações */}
+                        <a href="">
+                        <img src="../img/Header/perfil.png" className={styles.right_icons} />
+                        </a>
+
+
+                    </div>
+
+
+                    <div className={styles.right_profile_container}>
+                        <button className={styles.right_profile_button} onClick={toggleMenu} ref={buttonRef}>
+                            <img src="../img/Header/steve.png" alt="Perfil" />
+                        </button>
+
+                        {/*Profile-Menu-bar-*/}
+                        <div ref={menuRef} className={`${styles.menu_profile_container} 
+                            ${isOpen ? styles.menu_profile_container_active : ""}`}>
+
+                            <a href="/" className={styles.menu_items}>Perfil</a>
+                            <a href="/" className={styles.menu_items}>Configurações</a>
+                            <a href="/login" className={styles.menu_desconect}>Desconectar-se</a>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
 
-            {/* Lado direito: ícones de ação */}
-            <div className={styles.content_right}>
-                <a href="#">
-                    <img className={styles.icons} src="/img/Header/coração.png" alt="coração" />
-                </a>
-                <a href="#">
-                    <img className={styles.icons} src="/img/Header/perfil.png" alt="perfil" />
-                </a>
-                <a href="#">
-                    <img className={styles.icons} src="/img/Header/configurações.png" alt="configurações" />
-                </a>
-            </div>
-        </header>
+
+
+
+
+
+        </div>
     );
 }
 

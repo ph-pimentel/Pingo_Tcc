@@ -10,13 +10,8 @@ function Home() {
             <Header/>
             <Background/>
             <Container>
-                <Title/><Title/>
-                
-                
-                
-                {/* <Carrossel /> */}
-         
-               
+
+    
                
             </Container>
         </>
