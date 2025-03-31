@@ -22,17 +22,17 @@ function Header() {
                     <div className={styles.left_icons_container}>
                        {/* Amigos */}
                         <a href="">
-                        <img src="../img/Header/perfil.png" className={styles.left_icons} />
+                        <img src="../img/Header/amigos.png" className={styles.left_icons} />
                         </a>
 
                         {/* Favoritos */}
                         <a href="">
-                            <img src="../img/Header/perfil.png" className={styles.left_icons} />
+                            <img src="../img/Header/amigos.png" className={styles.left_icons} />
                         </a>
 
                         {/* Quadras */}
                         <a href="">
-                            <img src="../img/Header/perfil.png" className={styles.left_icons} />
+                            <img src="../img/Header/amigos.png" className={styles.left_icons} />
                         </a>
                     </div>
 
@@ -54,17 +54,17 @@ function Header() {
 
                         {/* Adicione sua quadra */}
                         <a href="">
-                        <img src="../img/Header/perfil.png" className={styles.right_icons} />
+                        <img src="../img/Header/addQuadra.png" className={styles.right_icons} />
                         </a>
 
                         {/* Informações */}
-                        <a href="">
-                        <img src="../img/Header/perfil.png" className={styles.right_icons} />
+                        <a href="/sobre">
+                        <img src="../img/Header/informacoes.png" className={styles.right_icons} />
                         </a>
 
                         {/* Notificações */}
                         <a href="">
-                        <img src="../img/Header/perfil.png" className={styles.right_icons} />
+                        <img src="../img/Header/sino.png" className={styles.right_icons} />
                         </a>
 
 

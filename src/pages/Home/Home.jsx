@@ -1,19 +1,19 @@
-import Title from "../../components/Title/index";
-import Container from "../../components/Container/index";
-import Header from "../../components/Header/index";
-import Carrossel from "../../components/Carrossel/index";
-import Background from "../../components/Background/index";
+
+import Layout from "../../components/Layout/index";
+import QuadraCard from "../../components/CourtCard/index";
+import Filter from "../../components/Filter";
 
 function Home() {
     return (
         <>   
-            <Header/>
-            <Background/>
-            <Container>
+            <Layout> 
 
+                <Filter/>
+               <QuadraCard/> 
+                
+            </Layout>
     
-               
-            </Container>
+            
         </>
     );
 }
