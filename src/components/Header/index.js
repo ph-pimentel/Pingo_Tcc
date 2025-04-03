@@ -21,8 +21,8 @@ function Header() {
                     {/* - Icons -*/}
                     <div className={styles.left_icons_container}>
                        {/* Amigos */}
-                        <a href="">
-                        <img src="../img/Header/amigos.png" className={styles.left_icons} />
+                        <a href="/">
+                        <img src="../img/Header/home.png" className={styles.left_icons} />
                         </a>
 
                         {/* Favoritos */}
@@ -32,7 +32,7 @@ function Header() {
 
                         {/* Quadras */}
                         <a href="">
-                            <img src="../img/Header/amigos.png" className={styles.left_icons} />
+                            <img src="../img/Header/favoritos.png" className={styles.left_icons} />
                         </a>
                     </div>
 
@@ -53,18 +53,18 @@ function Header() {
                     <div className={styles.right_icons_container}>
 
                         {/* Adicione sua quadra */}
-                        <a href="">
+                        <a href="/quadraopcoes">
                         <img src="../img/Header/addQuadra.png" className={styles.right_icons} />
                         </a>
 
                         {/* Informações */}
-                        <a href="/sobre">
+                        <a href="/informacoes">
                         <img src="../img/Header/informacoes.png" className={styles.right_icons} />
                         </a>
 
                         {/* Notificações */}
                         <a href="">
-                        <img src="../img/Header/sino.png" className={styles.right_icons} />
+                        <img src="../img/Header/notification.png" className={styles.right_icons} />
                         </a>
 
 
