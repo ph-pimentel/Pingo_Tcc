@@ -13,7 +13,7 @@ function QuadraCard() {
     {/* --Informações da quadra-- */}
                 <div className={styles.info_container}>
                     <div className={styles.item_info} alt="Nome da quadra">
-                        <h1>Etec Paulistano Né</h1>
+                        <h1>Etec Homem</h1>
                     </div>
                     <div className={styles.item_info} alt="região">
                         <h1>Região</h1>
